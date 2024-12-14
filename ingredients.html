@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html len = "eng">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="steeze.css">
+        <title>Bolognese Cooking Guide</title>
+    </head>
+    <body style = "background-color: antiquewhite;">
+        <ul class = "navBar">
+            <li><a href="intro.html">Introduction</a></li>
+            <li><a href="ingredients.html">Ingredients</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Recipe Guide</a>
+              <div class="dropdown-content">
+                <a href="stock.html">Stock Recipe</a>
+                <a href="sauce.html">Sauce Recipe</a>
+                <a href="pasta.html">Pasta Recipe</a>
+              </div>
+            </li>
+            <li><a href = "quiz.html">Quiz</a></li>
+          </ul>
+
+          <p style = "font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif;">Ingredient Lists:</p>
+
+          <!--Each button is a collapsable element.  Contains badge element aswell.-->
+          <button type="button" class="collapsible" style = "font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; 
+          text-align: center;">Stock Ingredients<span class = "badge">11</span></button>
+          <div class="content">
+            <ul class = "drop">
+                <li>3lb chicken wings</li><br>
+                <li>2 celery stalks, chopped</li><br>
+                <li>2 carrots, chopped</li><br>
+                <li>1 onion, halved</li><br>
+                <li>1 head garlic, halved</li><br>
+                <li>2 turnips, halved</li><br>
+                <li>Halved ginger</li><br>
+                <li>Parsnips</li><br>
+                <li>Fennel fronds</li><br>
+                <li>Black peppercorns</li><br>
+                <li>Water</li>
+            </ul>
+          </div>
+          <br></br>
+          <button type="button" class="collapsible" style = "font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; 
+          text-align: center;">Sauce Ingredients<span class = "badge">17</span></button>
+          <div class="content">
+            <ul class = "drop">
+                <li>1 large onion, minced</li><br>
+                <li>2 medium carrots, peeled and finely chopped</li><br>
+                <li>3 ribs celery, finely chopped</li><br>
+                <li>1 lb ground beef</li><br>
+                <li>1 lb ground pork</li><br>
+                <li>1 lb ground lamb, optional</li>
+                <li>Olive oil</li><br>
+                <li>0.5 pound pancetta</li><br>
+                <li>0.25 cup tomato paste</li><br>
+                <li>1 cup dry white wine</li><br>
+                <li>32 oz chicken stock</li><br>
+                <li>1 cup whole milk</li><br>
+                <li>Bay leaves</li><br>
+                <li>Grated nutmeg</li><br>
+                <li>Salt</li><br>
+                <li>Ground black pepper</li><br>
+                <li>0.5 cup heavy cream</li><br>
+                <li>Pasta (if store bought)</li>
+            </ul>
+          </div>
+          <br></br>
+          <button type="button" class="collapsible" style = "font-size: 30px; font-family: Georgia, 'Times New Roman', Times, serif; 
+          text-align: center;">Pasta Ingredients<span class = "badge">3</span></button>
+          <div class="content">
+            <ul class = "drop">
+                <li>2 cups all purpose flour</li><br>
+                <li>4 eggs</li><br>
+                <li>kosher salt</li>
+            </ul>
+          </div>
+          
+          <!--Script that opens and closes each collapsable-->
+          <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+          </script>
+          <button onclick = "window.location.href = 'https:\/\/gseidl03.github.io/stock.html'" 
+          type = "button" class = "myButtons">Next</button>
+    </body>
+</html>
